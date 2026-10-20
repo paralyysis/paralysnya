@@ -1,53 +1,25 @@
 #include <iostream>
+#include <cmath>
 
 using namespace std;
 
 int main() {
+    setlocale(LC_ALL, "Ukrainian");
 
-  int a, b, op;
+    double a;
+    double b;
 
-  double result;
+    cout << "=== Програма: Піднесення числа до степеня ===" << endl;
+    
+    cout << "Введіть число a (основа): ";
+    cin >> a;
+    
+    cout << "Введіть ступінь b: ";
+    cin >> b;
 
-  cout << "Введіть перше число\n";
+    double result = pow(a, b);
 
-  cin >> a;
+    cout << "Результат: " << a << " у степені " << b << " дорівнює " << result << endl;
 
-  cout << "Введіть оператор\n1\t+\n2\t-\n3\t*\n4\t/\n\n";
-
-  cin >> op;
-
-  cout << "Введіть друге число\n";
-
-  cin >> b;
-
-  switch(op) {
-
-    case 1:
-
-               result = a + b;
-
-               break;
-
-    case 2:
-
-               result = a - b;
-
-               break;
-
-    case 3:
-
-               result = a * b;
-
-               break;
-
-    case 4:
-
-               result = (double) a / b;
-
-               break;
-
-  }
-
-  cout << "Результат = " << result;
-
+    return 0;
 }
